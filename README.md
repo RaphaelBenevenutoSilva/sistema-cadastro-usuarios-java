@@ -9,8 +9,8 @@ Criei um sistema que separa o "Voto Único" do "Voto da Torcida", como no progra
 - **Destaque:** Usei média ponderada (70/30) para chegar no resultado final e organizei os nomes em Arrays para facilitar o cálculo dentro de um laço `for`.
 
 ### 📋 Sistema de Cadastro de Usuários
-Um CRUD simples rodando no console para praticar a estrutura de objetos.
-- **Destaque:** Aqui já comecei a usar **ArrayList** em vez de arrays fixos e criei uma classe `Usuario` separada. Tem funções de listar todos os cadastrados e buscar um nome específico usando `equalsIgnoreCase`.
+Um sistema simples para salvar e gerenciar informações no console.
+- **Destaque:** Aqui já comecei a usar **ArrayList** em vez de arrays fixos e criei uma classe `Usuario` separada. Tem funções de salvar, listar todos e buscar um nome específico.
 
 ## 🛠️ Tecnologias
 - Java (Scanner, ArrayList, Listas)
