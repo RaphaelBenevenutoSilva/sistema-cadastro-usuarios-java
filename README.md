@@ -1,4 +1,4 @@
-## 🚀 O que desenvolvi:
+##  O que desenvolvi:
 
 📦 **Sistema de Cadastro de Pessoas (POO)**
 Um gerenciador completo via console que aplica conceitos fundamentais de arquitetura e manipulação de dados em Java.
