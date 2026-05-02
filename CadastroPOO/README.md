@@ -1,39 +1,44 @@
 # 📋 Sistema de Cadastro de Pessoas (POO)
 
-Este projeto é uma aplicação de console desenvolvida em **Java** para exercitar conceitos fundamentais de **Programação Orientada a Objetos (POO)**, manipulação de coleções e tratamento de exceções.
+Este projeto é uma aplicação de console desenvolvida em **Java** para consolidar conhecimentos em **Backend**, focando em Programação Orientada a Objetos, manipulação dinâmica de dados e boas práticas de arquitetura.
 
 ---
 
-## 🚀 Estrutura Técnica do Projeto
+## 🏛️ Arquitetura e Funções do Sistema
 
-### 1️⃣ A Classe Pessoa (O Objeto de Dados)
-Esta é a base do sistema, definindo a entidade principal.
-*   **Atributos**: Nome e idade para armazenamento de informações básicas.
-*   **Construtor**: Implementação de `public Pessoa(String nome, int idade)` para inicialização de objetos.
-*   **Método mostrar()**: Utiliza `System.out.printf` com o formatador `%-20s`, que reserva 20 espaços para o nome e o alinha à esquerda, garantindo uma visualização organizada em colunas.
+O projeto foi estruturado seguindo o princípio de separação de responsabilidades, garantindo que cada classe tenha uma função clara dentro do ecossistema da aplicação:
 
-### 2️⃣ A Classe Cadastro (Lógica de Gerenciamento)
-Funciona como o "banco de dados" em memória da aplicação.
-*   **Armazenamento**: Utiliza um `ArrayList<Pessoa>` para gerenciar os dados.
-*   **Ordenação Avançada**: O método `listar` implementa `Comparator.comparing` com `.toLowerCase()`, garantindo que a lista seja exibida em ordem alfabética real, ignorando a diferença entre maiúsculas e minúsculas.
-*   **Busca e Remoção**: Implementação de loops *for-each* combinados com `equalsIgnoreCase`, permitindo que o usuário localize registros de forma flexível (ex: pesquisar "ana" para encontrar "Ana").
+### 1️⃣ Classe `Pessoa`: O Modelo de Dados (Model)
+Esta classe representa a **entidade** fundamental do sistema.
+*   **Função**: Atua como o "molde" para a criação de objetos, armazenando os atributos básicos `nome` e `idade`.
+*   **Comportamento**: Contém o método `mostrar()`, que utiliza o formatador `%-20s` para garantir que os dados sejam exibidos em colunas organizadas no console.
+*   **Estado**: É responsável por manter a integridade dos dados individuais de cada registro.
 
-### 3️⃣ A Classe CadastroPOO (Interface e Menu)
-Onde reside o fluxo principal (`main`) e a interação com o usuário.
-*   **Robustez (Try-Catch)**: Tratamento de exceções na leitura do menu para evitar que o programa trave caso o usuário digite letras em vez de números.
-*   **Gestão de Buffer**: Uso estratégico de `sc.nextLine()` após leituras numéricas para limpar o buffer do teclado e evitar erros em capturas de texto posteriores.
-*   **UX - Recursividade Visual**: Uso de estruturas `while` nos módulos de busca e remoção, permitindo que o usuário repita a ação ou saia para o menu anterior sem interrupções bruscas.
+### 2️⃣ Classe `Cadastro`: O Gerenciador de Lógica (Service)
+Esta é a "inteligência" do programa, funcionando como um banco de dados em memória.
+*   **Função**: Gerencia o `ArrayList<Pessoa>`, ditando as regras para inserção, listagem, busca e remoção de registros.
+*   **Processamento**: Implementa lógica de ordenação avançada via `Comparator.comparing` com `.toLowerCase()`, além de filtros de busca com `equalsIgnoreCase` para maior flexibilidade.
+*   **Abstração**: Centraliza a manipulação da coleção de dados, separando a lógica de negócio da interface de usuário.
+
+### 3️⃣ Classe `CadastroPOO`: A Interface e Fluxo (Main/View)
+Esta classe funciona como o **maestro** da aplicação.
+*   **Função**: Gerencia o ponto de entrada (`main`) e a interação direta com o usuário através de menus interativos.
+*   **Orquestração**: Recebe as entradas via `Scanner`, trata possíveis erros de digitação com blocos `try-catch` e aciona os métodos da classe `Cadastro`.
+*   **UX (User Experience)**: Controla o fluxo de navegação e utiliza a limpeza de buffer (`sc.nextLine()`) para garantir uma experiência de uso fluida e sem interrupções.
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas
-*   **Linguagem:** Java ☕
-*   **IDE:** NetBeans / IntelliJ IDEA
-*   **Versionamento:** Git & GitHub
+## 🛠️ Tecnologias e Conceitos Aplicados
+*   **Linguagem:** Java ☕ (Foco em Backend).
+*   **IDE utilizada:** NetBeans.
+*   **Conceitos de POO:** Classes, Objetos, Construtores e Encapsulamento.
+*   **Estrutura de Dados:** Collections (`ArrayList`).
+*   **Tratamento de Erros:** Exceções (`Try-Catch`).
 
 ---
 
 ## 👨‍💻 Autor
 **Raphael Benevenuto Silva**
-*   Desenvolvedor Backend em formação.
-*   Cursando Análise e Desenvolvimento de Sistemas (UNIMETROCAMP Wyden).
+*   Aspiring Backend Developer | Java.
+*   Cursando o 3º semestre de Análise e Desenvolvimento de Sistemas (UNIMETROCAMP Wyden).
+*   Focado em construir bases sólidas em lógica e Orientação a Objetos.
