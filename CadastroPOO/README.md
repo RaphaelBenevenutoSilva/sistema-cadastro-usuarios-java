@@ -29,7 +29,7 @@ Esta classe funciona como o **maestro** da aplicação.
 ---
 
 ## 🛠️ Tecnologias e Conceitos Aplicados
-*   **Linguagem:** Java ☕ .
+*   **Linguagem:** Java ☕ 
 *   **IDE utilizada:** NetBeans.
 *   **Conceitos de POO:** Classes, Objetos, Construtores e Encapsulamento.
 *   **Estrutura de Dados:** Collections (`ArrayList`).
